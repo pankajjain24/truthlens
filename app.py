@@ -405,12 +405,12 @@ if df.empty:
         st.success("🤖 LIAR benchmark model: READY")
         test_item = metrics.get("test", {})
         test_report = test_item.get("classification_report", {})
-        a,b,c = st.columns(3)
+        a, b, c = st.columns(3)
         a.metric("Test ROC-AUC", f"{test_item.get('roc_auc', 0):.3f}")
         b.metric("Test accuracy", f"{test_report.get('accuracy', 0):.1%}")
         c.metric("Test macro F1", f"{test_report.get('macro avg', {}).get('f1-score', 0):.3f}")
     else:
-        st.warning("🤖 LIAR benchmark model: NOT FOUND. Run `python src\prepare_liar.py` then `python src\train_model.py`.")
+        st.warning("🤖 LIAR benchmark model: NOT FOUND. Run `python src/prepare_liar.py` then `python src/train_model.py`.")
     st.markdown(
         """
         ### Try these queries
