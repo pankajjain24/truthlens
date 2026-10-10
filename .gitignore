@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+data/raw/liar/
+data/raw/gdelt/
+app_stage5.py
+app_stage6.py
+app_old.py
+data/processed/liar_prepared.csv
